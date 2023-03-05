@@ -54,5 +54,12 @@ def expanding_cart():
     return render_template('expanding-cards.html', title=title)
 
 
+@app.route('/steps/')
+def steps():
+    url_for('steps')
+    title = 'Steps'
+    return render_template('steps.html', title=title)
+
+
 if __name__ == '__main__':
     app.run(debug=True)

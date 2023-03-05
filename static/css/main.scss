@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600&family=League+Spartan:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600&family=Muli:wght@500&display=swap');
+
+:root {
+  --line-border-fill: #3498db;
+  --line-border-empty: #e0e0e0;
+}
 
 body {
   font-family: 'Comfortaa', cursive;
@@ -7,12 +13,12 @@ body {
 }
 
 .container {
-
   width: 95%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100% !important;
 }
 
 // HEX COLORS
@@ -145,4 +151,94 @@ body {
   .panel:nth-of-type(4), .panel:nth-of-type(5) {
     display: none;
   }
+}
+
+//PROGRESS BAR
+.container--progress {
+  font-family: 'Muli', sans-serif;
+  background-color: #f6f7fb;
+  text-align: center;
+
+
+}
+
+.my_progress_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 400px;
+
+
+}
+
+.my_progress_wrapper::before {
+  content: '';
+  background-color: #e0e0e0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 100% !important;
+  transform: translateY(-50%);
+
+}
+
+.my_progress {
+  background-color: var(--line-border-fill);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 0;
+  transform: translateY(-50%);
+  transition: .4s ease;
+}
+
+
+.circle {
+  z-index: 4;
+  background-color: #fff;
+  color: #999;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line-border-empty);
+  transition: .4s ease;
+}
+
+.circle.active {
+  border-color: var(--line-border-fill);
+}
+
+.buttons {
+  width: 14rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  color: #fff;
+  background-color: var(--line-border-fill);
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px 30px;
+  margin-top: 65px;
+
+
+}
+
+.button:active {
+  transform: scale(.98);
+}
+
+.button:disabled {
+  background-color: var(--line-border-empty);
+  cursor: not-allowed ;
 }

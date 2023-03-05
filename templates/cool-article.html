@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/article.css') }}">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+          integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+
+<body>
+<header>
+
+</header>
+<main>
+    <div class="article-bg">
+        <div class="container">
+            <div class="circle-container ">
+                <div class="article-circle">
+                    <button id="close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button id="open">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="content">
+                <h1>Cool article</h1>
+                <small>We try to do it better</small>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+                    fugiat, maiores natus omnis praesentium quos voluptatem?
+                    Aliquid, animi debitis, eaque maxime natus nesciunt nihil
+                    obcaecati porro possimus reiciendis ut vero.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+                    fugiat, maiores natus omnis praesentium quos voluptatem?
+                    Aliquid, animi debitis, eaque maxime natus nesciunt nihil
+                    obcaecati porro possimus reiciendis ut vero.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+                    fugiat, maiores natus omnis praesentium quos voluptatem?
+                    Aliquid, animi debitis, eaque maxime natus nesciunt nihil
+                    obcaecati porro possimus reiciendis ut vero.</p>
+
+                <h3>My way</h3>
+                <img src="{{ url_for('static', filename='images/article/1.jpg') }}"
+                     alt="">
+                <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis delectus error incidunt inventore laboriosam rerum saepe tempore temporibus unde ut! Culpa ea incidunt laborum nobis quae. Impedit minima rerum voluptatem.</span><span>Atque, dolore, ea facere fuga impedit in ipsa ipsum iste laborum libero maiores mollitia numquam omnis, optio pariatur quae quidem quo ratione rem rerum similique sint totam ut vel vitae.</span><span>Aliquam asperiores explicabo illum inventore labore laborum maxime modi molestias necessitatibus nobis, odio porro sed similique sint tempora? Aperiam consectetur corporis enim, eos fugit odio quidem totam? Ratione, velit voluptate.</span><span>Cumque excepturi iusto voluptates? Accusantium animi, atque eligendi eum incidunt laudantium nemo nesciunt officiis recusandae rem! Aperiam cum delectus deleniti doloribus eaque enim hic, mollitia nostrum quisquam repellendus repudiandae sed!</span><span>Commodi corporis dolores, ducimus eligendi enim ex fugiat id incidunt ipsam maxime nemo, non praesentium tempora? Accusantium asperiores culpa distinctio, doloribus eius hic ipsa ipsum iste, necessitatibus nemo non suscipit!</span>
+                </p>
+
+            </div>
+        </div>
+        <nav class="article-nav">
+            <ul>
+                <li><i class="fas fa-home"></i> <a
+                        href="{{ url_for('index') }}">Home</a></li>
+                <li><i class="fas fa-user-alt"></i> <a
+                        href="{{ url_for('about') }}">About</a></li>
+                <li><i class="fas fa-envelope"></i><a
+                        href="{{ url_for('projects') }}"> Back to
+                    projects</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</main>
+<footer></footer>
+<script src="{{ url_for('static', filename='js/article.js') }}"></script>
+</body>
+</html>

@@ -61,5 +61,12 @@ def steps():
     return render_template('steps.html', title=title)
 
 
+@app.route('/cool-article/')
+def cool_article():
+    url_for('cool_article')
+    title = 'Cool article'
+    return render_template('cool-article.html', title=title)
+
+
 if __name__ == '__main__':
     app.run(debug=True)

@@ -4,25 +4,54 @@ app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 
+@app.context_processor
+def menu_processor():
+    menu = [{'name': 'Home', 'url': 'index'},
+            {'name': 'About', 'url': 'about'},
+            {'name': 'Projects', 'url': 'projects'}]
+    return {'menu': menu}
+
+
 @app.route('/')
-def hello_world():  # put application's code here
+def index():  # put application's code here
     title = 'Main Js'
+    url_for('index')
     return render_template('index.html', title=title)
 
 
-@app.route('/about/<username>')
-def about(username):
+@app.route('/about/')
+def about():
     title = 'About page'
-    return render_template('about.html', title=title, user=username)
+    url_for('about')
+    return render_template('about.html', title=title)
 
 
-@app.route('/projects/', methods=['GET', 'POST'])
-def myProjects():
-    if request.method == 'GET':
-        print(request.args.get('data'))
-        print(request.args.get('lalal'))
+@app.route('/projects/')
+def projects():
+    url_for('projects')
     title = 'My Projects'
     return render_template('projects.html', title=title)
+
+
+@app.route('/hex-colors/')
+def hex_colors():
+    url_for('hex_colors')
+    title = 'Hex colors with JS'
+    return render_template('hex-colors.html')
+
+
+@app.route('/random-quotes/')
+def random_quotes():
+    url_for('random_quotes')
+    title = 'Random quotes'
+    return render_template('random-quotes.html')
+
+
+@app.route('/expanding-cart/')
+def expanding_cart():
+    url_for('expanding_cart')
+    title = 'Expanding carts'
+    return render_template('expanding-cards.html', title=title)
 
 
 if __name__ == '__main__':

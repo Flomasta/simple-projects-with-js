@@ -1,12 +1,8 @@
 {% extends 'main.html' %}
+
 {% block content %}
-    <div class="container">
-        <div class="hex-colors"><h1>Click the button to display different
-            colors</h1>
-            <h2>Hex color is # <span id="hex-code">000000</span></h2>
-            <button type="button" class="btn btn-primary"
-                    onclick="changeColor()">Click me
-            </button>
-        </div>
-    </div>
+
+    <a href="{{ url_for('hex_colors') }}">hex-colors</a>
+    <a href="{{ url_for('expanding_cart') }}">expanding-cart</a>
+
 {% endblock %}

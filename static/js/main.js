@@ -8,3 +8,24 @@ function changeColor() {
     document.getElementById('hex-code').innerHTML = hexcode;
     document.getElementsByTagName('body')[0].style.background = '#' + hexcode;
 }
+
+
+//Expanding carts
+
+const panels = document.querySelectorAll('.panel')
+panels.forEach((panel) => {
+    panel.addEventListener('click', () => {
+        removeActiveClasses()
+        panel.classList.add('active')
+    })
+
+})
+
+function removeActiveClasses() {
+    panels.forEach((panel) => {
+        panel.classList.remove('active')
+    })
+}
+
+
+//STEPS

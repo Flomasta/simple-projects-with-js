@@ -68,5 +68,12 @@ def cool_article():
     return render_template('cool-article.html', title=title)
 
 
+@app.route('/search-button/')
+def search_button():
+    url_for('search_button')
+    title = 'Search button'
+    return render_template('search-button.html', title=title)
+
+
 if __name__ == '__main__':
     app.run(debug=True)

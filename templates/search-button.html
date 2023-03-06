@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+
+{% block css %}
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/search-button.css') }}">
+{% endblock %}
+{% block content %}
+    <div class="container container--search_button">
+        <div class="search" id="search_container">
+            <input type="text" class="input" placeholder="Search...">
+            <button class="btn--search" id="search-button"><i
+                    class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
+
+{% endblock %}
+{% block js %}
+    <script src="{{ url_for('static', filename='js/search-button.js') }}"></script>
+{% endblock %}

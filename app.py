@@ -75,5 +75,12 @@ def search_button():
     return render_template('search-button.html', title=title)
 
 
+@app.route('/blurry-loading/')
+def blurry_loading():
+    url_for('blurry_loading')
+    title = 'Blurry loading'
+    return render_template('blurry-loading.html', title=title)
+
+
 if __name__ == '__main__':
     app.run(debug=True)

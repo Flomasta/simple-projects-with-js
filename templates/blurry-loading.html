@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+
+{% block css %}
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/blurry-loading.css') }}">
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="bg"></div>
+        <div class="loading-text">
+            0%
+        </div>
+    </div>
+
+
+
+{% endblock %}
+{% block js %}
+    <script src="{{ url_for('static', filename='js/blurry-loading.js') }}"></script>
+{% endblock %}

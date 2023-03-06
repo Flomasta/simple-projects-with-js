@@ -1,0 +1,42 @@
+body {
+  height: unset;
+  overflow-x: hidden !important;
+}
+
+.container {
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #efedd6;
+  height: unset;
+}
+
+.content {
+  background-color: steelblue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 30px;
+  transition: transform .4s ease;
+
+}
+
+.content:nth-of-type(even) {
+  transform: translateX(400%);
+}
+
+.content:nth-of-type(odd) {
+  transform: translateX(-400%);
+}
+
+.content.show {
+  transform: translateX(0);
+}
+
+.content h2 {
+  font-size: 45px;
+}

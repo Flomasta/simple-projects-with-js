@@ -82,5 +82,12 @@ def blurry_loading():
     return render_template('blurry-loading.html', title=title)
 
 
+@app.route('/scroll-animation/')
+def scroll_animation():
+    url_for('scroll_animation')
+    title = 'Scroll animation'
+    return render_template('scroll-animation.html', title=title)
+
+
 if __name__ == '__main__':
     app.run(debug=True)

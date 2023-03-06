@@ -2,11 +2,14 @@
 
 {% block content %}
 
-    <a href="{{ url_for('hex_colors') }}">hex-colors</a>
-    <a href="{{ url_for('expanding_cart') }}">expanding-cart</a>
-    <a href="{{ url_for('steps') }}">steps</a>
-    <a href="{{ url_for('cool_article') }}">cool-article</a>
-    <a href="{{ url_for('search_button') }}">search-button</a>
-    <a href="{{ url_for('blurry_loading') }}">blurry-loading</a>
+    <div class="container">
+        <a href="{{ url_for('hex_colors') }}">hex-colors</a>
+        <a href="{{ url_for('expanding_cart') }}">expanding-cart</a>
+        <a href="{{ url_for('steps') }}">steps</a>
+        <a href="{{ url_for('cool_article') }}">cool-article</a>
+        <a href="{{ url_for('search_button') }}">search-button</a>
+        <a href="{{ url_for('blurry_loading') }}">blurry-loading</a>
+        <a href="{{ url_for('scroll_animation') }}">scroll-animation</a>
+    </div>
 
 {% endblock %}

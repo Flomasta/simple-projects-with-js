@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+
+{% block css %}
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/split-landing.css') }}">
+{% endblock %}
+{% block content %}
+    <div class="container container--split-landing">
+        <div class="split left">
+            <h1>Space</h1>
+            <a href="" class="button--split-landing">Go up!</a>
+        </div>
+        <div class="split right">
+            <h1>Underwater</h1>
+            <a href="" class="button--split-landing">Dive in!</a>
+        </div>
+    </div>
+
+
+{% endblock %}
+{% block js %}
+    <script src="{{ url_for('static', filename='js/split-landing.js') }}"></script>
+{% endblock %}

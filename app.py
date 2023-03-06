@@ -89,5 +89,12 @@ def scroll_animation():
     return render_template('scroll-animation.html', title=title)
 
 
+@app.route('/split-landing/')
+def split_landing():
+    url_for('split_landing')
+    title = 'Split landing'
+    return render_template('split-landing.html', title=title)
+
+
 if __name__ == '__main__':
     app.run(debug=True)

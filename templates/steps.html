@@ -1,5 +1,8 @@
 {% extends 'main.html' %}
-
+{% block css %}
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/steps.css') }}">
+{% endblock %}
 {% block content %}
     <div class="container container--progress">
         <div class="my_progress_wrapper">
@@ -16,4 +19,7 @@
         </div>
 
     </div>
+{% endblock %}
+{% block js %}
+    <script src="{{ url_for('static', filename='js/steps.js') }}"></script>
 {% endblock %}
